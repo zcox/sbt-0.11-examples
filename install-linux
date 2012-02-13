@@ -1,0 +1,12 @@
+# /usr/local/bin/xsbt-launch.jar
+wget http://typesafe.artifactoryonline.com/typesafe/ivy-releases/org.scala-tools.sbt/sbt-launch/0.11.2/sbt-launch.jar
+sudo mv sbt-launch.jar /usr/local/bin/xsbt-launch.jar
+
+# /usr/local/bin/xsbt
+cat << 'EOF' > xsbt
+#!/bin/bash
+java -Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=384M -jar `dirname $0`/sbt-launch.jar "$@"
+EOF
+chmod +x xsbt
+sudo mv sbt /usr/local/bin/xsbt
+
