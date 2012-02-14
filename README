@@ -1,3 +1,4 @@
 hello1: Simplest possible example using Build.scala
 hello2: A few more settings in Build.scala
 hello3: Using more Scala in Build.scala
+hello4: build.sbt version of hello2

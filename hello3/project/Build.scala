@@ -27,13 +27,17 @@ object Hello3Build extends Build {
   
   override lazy val settings = super.settings ++ buildSettings
   
+  lazy val dependencies = Seq (
+    specs2
+  )
+  
   lazy val hello3 = Project (
     id = "hello3",
     base = file("."),
     settings = 
       Project.defaultSettings ++ 
       Seq (
-        libraryDependencies += specs2
+        libraryDependencies ++= dependencies
       )
   )
 }
