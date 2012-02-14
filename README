@@ -1,3 +1,5 @@
+Examples for Iowa Scala meetup http://www.meetup.com/ia-scala/events/51611342/
+
 hello1: Simplest possible example using Build.scala
 hello2: A few more settings in Build.scala
 hello3: Using more Scala in Build.scala
